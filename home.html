@@ -16,6 +16,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 	<script src="js/jquery.poptrox.min.js"></script>
 	<script src="js/skel.min.js"></script>
 	<script src="js/init.js"></script>
+	<script src="js/verify.notify.min.js"></script>
 	<noscript>
 		<link rel="stylesheet" href="css/skel-noscript.css" />
 		<link rel="stylesheet" href="css/style.css" />
@@ -70,20 +71,20 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 	</header>
 	<form action="http://getsimpleform.com/messages?form_api_token=d84cc654ceb102588231c31030e91f5d" method="post">
 		<input type='hidden' name='subject' value='Message sent from 5th Floor Studios website' />
-		<input type='hidden' name='redirect_to' value='www.google.com' />
+		<input type='hidden' name='redirect_to' value='https://www.google.com/' />
 		<div class="row half">
-			<div class="6u"><input type="text" class="text" name="name" placeholder="Name" /></div>
-			<div class="6u"><input type="text" class="text" name="email" placeholder="Email" /></div>
+			<div class="6u"><input type="text" class="text" name="name" placeholder="Name" data-validate="required" /></div>
+			<div class="6u"><input type="text" class="text" name="email" placeholder="Email" data-validate="required,email" /></div>
 		</div>
 		<div class="row half">
 			<div class="12u">
-				<textarea name="message" placeholder="Message"></textarea>
+				<textarea name="message" placeholder="Message" data-validate="required" ></textarea>
 			</div>
 		</div>
 		<div class="row">
 			<div class="12u">
 				<ul class="actions">
-					<li><a href="#" class="button form">Send Message</a></li>
+					<li><input type="submit" class="button form" value="Send Message"></li>
 				</ul>
 			</div>
 		</div>
